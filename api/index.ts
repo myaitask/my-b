@@ -25,6 +25,19 @@ app.get('/', (c) => {
 })
 
 // Webhook receiver
+app.get('/webhooks/whatsapp', (c) => {
+  const mode = c.req.query('hub.mode')
+  const token = c.req.query('hub.verify_token')
+  const challenge = c.req.query('hub.challenge')
+
+  if (mode === 'subscribe' && token === process.env.META_VERIFY_TOKEN) {
+    console.log('Webhook verified successfully!')
+    return c.text(challenge || 'ok')
+  } else {
+    return c.text('Forbidden', 403)
+  }
+})
+
 app.post('/webhooks/whatsapp', async (c) => {
   const body = await c.req.json()
   
