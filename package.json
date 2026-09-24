@@ -1,0 +1,19 @@
+{
+  "name": "my-b",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "hono": "^4.6.0",
+    "inngest": "^3.31.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.0",
+    "vercel": "^59.26.0"
+  }
+}
