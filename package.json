@@ -2,9 +2,7 @@
   "name": "my-b",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "vercel dev"
-  },
+  "scripts": {},
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
     "hono": "^4.6.0",
