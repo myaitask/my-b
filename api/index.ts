@@ -9,7 +9,7 @@ export const config = {
   runtime: 'edge',
 }
 
-const app = new Hono().basePath('/api')
+const app = new Hono()
 
 app.use('*', cors({
   origin: 'https://automate.myaitask.com',
