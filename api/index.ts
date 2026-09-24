@@ -46,3 +46,4 @@ app.on(
 )
 
 export default handle(app)
+export { app }
